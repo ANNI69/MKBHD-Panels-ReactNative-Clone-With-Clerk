@@ -5,18 +5,22 @@ export default function Corousel() {
     return (
         <Carousel<{ url: string }>
             width={400}
-            height={200}
+            height={720}
             autoPlay={true}
             
             data={[
-                { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-F4pdgj8EL8ZmPPSkrvj5bPPXJov5DxAplA&s' },
-                { url: 'https://img.heartlight.org/overlazy/creations/2172.jpg' },
-                { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzkDHky6h-iu-WBbrWeVWJQE8t-rtwFVvHvObnUJ_bYHe97iwN6-YSgNF4pPw-2nU5IeA&usqp=CAU' },
-                { url: 'https://dailyverses.net/images/en/niv/xl/james-1-6-2.jpg' },
-                { url: 'https://dailyverses.net/images/en/kjv/amos-5-24-2.jpg' },
+                { url: 'https://pbs.twimg.com/media/GYkf3lyasAMj0ED.jpg:large' },
+                { url: 'https://i.ytimg.com/vi/LhLu3Akkl_s/maxresdefault.jpg' },
+                { url: 'https://i.ytimg.com/vi/8VZ2_kBu1Zg/maxresdefault.jpg' },
+                { url: 'https://www.lavanguardia.com/andro4all/hero/2024/09/panels-mkhbd-1.jpg?width=768&aspect_ratio=16:9&format=nowebp' },
+                { url: 'https://uploads.dailydot.com/2024/09/marques-brownlee-iphone-designs.jpg?q=65&auto=format&w=1600&ar=2:1&fit=crop' },
             ]}
             renderItem={({ item }) => {
-                return <Image source={{ uri: item.url }} style={{ width: 400, height: 200 }} /> ;
+                return <Image  
+                source={{ uri: item.url }} 
+                style={{ width: 400, height: 200, resizeMode: 'cover' }} 
+            
+                /> ;
             }}
         />
 

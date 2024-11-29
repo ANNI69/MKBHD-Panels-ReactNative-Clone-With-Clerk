@@ -1,5 +1,5 @@
 import Style from "@/components/Style";
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView, StatusBar } from "react-native";
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Suggested from "../ForYouTabs/Suggested";
 import Library from "../ForYouTabs/Library";
@@ -17,6 +17,7 @@ export default function ForYou() {
     }
     return (
         <SafeAreaView  style={{ flex: 1 }}>
+            <StatusBar barStyle="light-content" backgroundColor={Style.COLOR_GREY} />
             <Tab.Navigator screenOptions={
                 {
                     tabBarLabelStyle: {
@@ -39,30 +40,7 @@ export default function ForYou() {
                 <Tab.Screen name="Liked" component={Liked} />
                 <Tab.Screen name="Library" component={Library} />
             </Tab.Navigator>
+            
         </SafeAreaView>
     )
 }
-
-// function Library() {
-//     return (
-//         <View>
-//             <Text>Library</Text>
-//         </View>
-//     )
-// }
-
-// function Suggested() {
-//     return (
-//         <View>
-//             <Text>Suggested</Text>
-//         </View>
-//     )
-// }
-
-// function Liked() {
-//     return (
-//         <View>
-//             <Text>Liked</Text>
-//         </View>
-//     )
-// }
